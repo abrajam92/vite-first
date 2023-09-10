@@ -1,0 +1,60 @@
+*** POR HACER ***
+
+* Hacer herramienta que resulte facil para empleados para postear noticias
+
+- ## NavigationBar
+    * Establecer marcaje de página actual.
+    * Corregir bug en menú responsivo que oculta links al redimensionar en grande con menú responsivo oculto.
+
+- ## Footer
+    * Estilizar footer.
+
+- ## Sección /main/
+    * Estilizar video preview.
+    * Generar sección preview Nos films (en carrusel).
+    * Generar sección preview News (en carrusel talvez).
+
+- ## Sección /Á propos/
+    * Avenue B Prod descripción de la empresa.
+    
+- ## Sección /films/
+    * Adaptar tipografía de encabezados automáticamente para que no se salga de la MovieCard.
+    * Completar estilos gráficos de las MovieCards.
+    * Generar cabeceras por EtatDeFilm.
+    * Estilizar MovieDetailsBigCard.
+    * Añadir animación en hover de movieCards sin poster.
+    * Adaptar reproducción con youtube API https://developers.google.com/youtube/iframe_api_reference?hl=es
+
+
+    * MovieCards sólo título de película y realizador
+    * Clasificar también Categorías como en producción, catálogo, en postproduccion, en afiche.
+
+    * No necesidad typo en encabezado
+
+- ## Sección /News/
+    * Establecer base de datos Json e intérprete para postear noticias
+
+- ## Sección /Équipe/
+    * Establecer y estilizar biografías del personal.
+    * Poner solo teléfono y mail
+
+*** DONE ***
+
+- ## Sección /films/
+    * Generar selector de categorías (Largometrajes, Cortometrajes, etc.)
+    * Añadir animación en hover en filmCards.
+    * Añadir overlay con transparencia en fondo cuando se muestre MovieDetailsBigCard
+    * Mostrar título e información en elementos MovieCard si no hay poster.
+    * Ordenar MovieCards por EtatDeFilm.
+    * Ordenar MovieCards por Año y por orden alfabético
+    * Añadir animación para ver trailers en MovieDetailsBigCard.
+    * Estilizar botón de cerrar.
+    * En MovieDetailsBigCard hacer datos menos importantes desplegables para poder trabajar bien el alto de la MovieDetailsBigCard.
+    * En MovieDetailsBigCard #BCI-group-3 debe ser desplegable y debe estar plegado por defecto
+    * Hacer diseño responsivo de MovieDetailsBigCard.
+    * Añadir tercera sección desplegable en MovieDetailsBigCard
+    * Perfeccionar selector de categorías por tipo y por género (no definitivo).
+
+
+- ## NavigationBar
+    * Añadir boton de menú y adaptar links en modo responsivo pequeño.

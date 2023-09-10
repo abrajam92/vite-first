@@ -1,0 +1,16 @@
+.socialMediaIcons{
+    width: 3vh;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+/* En la barra de navegación */
+nav .socialMediaIcons{
+    padding: 0 .3em;
+}
+
+/* En el footer */
+ul .socialMediaIcons{
+    padding: 0 .2em;
+}

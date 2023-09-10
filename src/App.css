@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap);
+
+:root {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#aLaUne {
+  font-weight: 700;
+  text-align: center;
+  color: rgb(80, 80, 80);
+}
+
+
+/* Elements of the Equipe:BiographyGenerator */
+
+
+.bioContainer {
+
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-top: 8vh; 
+  height: 15vw;
+}
+
+.bioContainer img {
+
+  width: 15vw;
+  height: 15vw;
+  margin-right: 3vw;
+}
+
+.bioContainer p {
+
+  width: 70vw;
+}

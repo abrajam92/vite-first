@@ -1,0 +1,106 @@
+@import "SocialMediaIcons.css";
+
+#nvbar-1 {
+    padding: 0.7em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 6vh;
+    border-bottom: 2px solid rgba(235, 235, 235, 0.5);
+}
+
+#logo-cont {flex-shrink: 2;}
+
+#logo-img {height: 6vh; width: auto;}
+
+#site-links {display: flex;}
+
+#menu-button-cont {
+    z-index: 2;
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.menu-line {
+    display: inline;
+    height: 5px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 5px;
+    margin: 3px 0px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    #logo-cont{display: none;}
+    #nvbar-1 {justify-content: space-around;}
+    #site-links {display: flex;}
+}
+
+@media screen and (max-width: 768px) {
+    
+    #nvbar-1 {justify-content: space-between;}
+
+    #logo-cont{
+        display: block;
+    }
+
+    #site-links {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 35%;
+        height: 100%;
+        display: none;
+        overflow-x: hidden;
+        flex-direction: column;
+        background-color: white;
+        transition: 0.3s;
+        box-shadow: 3px 3px 25px rgba(81, 81, 81, 0.358);
+    }
+    
+    #social-media-links {display: none;}
+
+    #menu-button-cont {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        padding: 0.5em;
+
+    }
+
+    #menu-button-cont:hover {background-color: white;}
+    #menu_button-cont:active {background-color: rgb(205, 205, 205);}
+    #menu_button-cont:current {background-color: rgb(205, 205, 205);}
+    
+}
+
+@media screen and (min-width: 768px) {
+
+    #nvbar-1 {
+        background-color: rgb(247, 247, 247);
+    }
+
+    #site-links {display: flex;}
+}
+
+#site-links > a{
+
+    font-size: 2vh;
+    font-weight: 400;
+    color: rgb(80, 80, 80);
+    text-decoration: none;
+    padding: 3vh 1.2rem;
+}
+
+#site-links > a:hover {
+    font-weight: 800;
+    color: white;
+    background-color: rgb(33, 33, 33);
+
+}

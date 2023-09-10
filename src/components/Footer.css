@@ -1,0 +1,61 @@
+@import "SocialMediaIcons.css";
+
+footer {
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: space-evenly;
+    height: 22vh;
+    width: 100%;
+    margin-top: auto;
+    border-top: 2px solid rgba(235, 235, 235, 0.5);
+    margin-top: 10vh;
+}
+
+#footer-firstList{
+
+
+    margin: 0;
+    padding: 0;
+    padding-top: 1em;
+
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+
+}
+
+#footer-secList{
+
+    margin: 0;
+    padding: 0;
+    padding-top: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+#footer-thirdList{
+
+    margin: 0;
+    padding: 0;
+    padding-top: 1em;
+
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+
+footer li a{
+
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
