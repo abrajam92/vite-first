@@ -210,7 +210,7 @@ function MovieCard({
                     <h1>{titre}</h1>
                     <h2>{etatDuFilm}</h2>
                     { (date) ? <h3>{date}</h3>: ""}
-                    <p>Director: {director}.</p>
+                    <p>{director}</p>
                 </div>
                 
             </div>
