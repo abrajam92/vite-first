@@ -2,15 +2,25 @@
 @import url(https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;500;600;700;800;900;1000&display=swap);
 
 :root {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   line-height: 1.2;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --blanco-cero: rgb(252, 252, 252);
+  --gris-menosCuatro: rgb(242, 242, 242);
+  --gris-menosTres: rgb(242, 242, 242);
+  --gris-menosDos: rgb(231, 231, 231);
+  --gris-menosUno: rgb(214, 214, 214);
+  --gris-cero: rgb(184, 184, 184);
+  --gris-uno:  rgb(125, 125, 125);
+  --gris-dos: rgb(95, 95, 95);
+  --negro-uno: #111111;
 }
+
 
 * {
   margin: 0;
@@ -25,34 +35,21 @@ p {
   font-family: 'Helvetica', Arial, sans-serif;
 }
 
-#aLaUne {
-  font-weight: 700;
+.fiftyPercentContainer{
+  width: 50%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.pageHeader{
   text-align: center;
-  color: rgb(80, 80, 80);
+  font-family: "Sofia sans condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 5vw;
+  margin-bottom: 0.25em;
 }
 
-
-/* Elements of the Equipe:BiographyGenerator */
-
-
-.bioContainer {
-
-  display: flex; 
-  flex-direction: column; 
-  flex-wrap: wrap;
-  align-content: flex-start;
-  margin-top: 8vh; 
-  height: 15vw;
-}
-
-.bioContainer img {
-
-  width: 15vw;
-  height: 15vw;
-  margin-right: 3vw;
-}
-
-.bioContainer p {
-
-  width: 70vw;
+.syllable {
+  hyphens: auto;
 }

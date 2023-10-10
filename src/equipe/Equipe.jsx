@@ -1,4 +1,4 @@
-import '/src/App.css';
+import './equipe.css';
 
 import NavigationBar from '/src/components/NavigationBar';
 import Footer from '/src/components/Footer';
@@ -6,60 +6,60 @@ import Footer from '/src/components/Footer';
 
 function Equipe() {
 
-    const bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis nisl rhoncus mattis rhoncus urna neque. Et sollicitudin ac orci phasellus egestas tellus. Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. At tempor commodo ullamcorper a lacus vestibulum sed arcu non. Magna fringilla urna porttitor rhoncus dolor purus non enim. Risus ultricies tristique nulla aliquet enim tortor at. Suspendisse ultrices gravida dictum fusce. Orci porta non pulvinar neque.";
-
     return (
         <>
-            <NavigationBar/ >
+            <NavigationBar actualPage={3}/>
 
-            <BiographyGen 
-            name="Caroline Bonmarchard" 
-            charge="Producer" 
-            bio={bio} 
-            picUrl='../affiches/Default.jpg' 
-            posLeft={true} />
+            <section id='general-container'>
 
-            <BiographyGen 
-            name="Xenia Sulyma" 
-            charge="Postproduction director" 
-            bio={bio} 
-            picUrl='../affiches/Default.jpg' 
-            posLeft={false} />
+                <BiographyGen 
+                name="BONMARCHAND Caroline" 
+                charge="Productrice" 
+                picUrl='/affiches/Default.jpg' 
+                posLeft={true} />
 
-            <BiographyGen 
-            name="Margaux Boisrame" 
-            charge="Assistant producer"
-            bio={bio}
-            picUrl='../affiches/Default.jpg'
-            posLeft={true} />
+                <BiographyGen 
+                name="SULYMA Xenia" 
+                charge="Postproduction director" 
+                picUrl='/affiches/Default.jpg' 
+                posLeft={false} />
 
-            <BiographyGen 
-            name="Thomas Ramon"
-            charge="Assistant producer, legal assistant"
-            bio={bio}
-            picUrl='../affiches/Default.jpg'
-            posLeft={false} />
+                <BiographyGen 
+                name="SMADJA Audrey"
+                charge="Legal assistant"
+                picUrl='/affiches/Default.jpg'
+                mail="audrey@avenuebprod.com"
+                posLeft={true} />
 
-            <BiographyGen 
-            name="Audrey Smadja"
-            charge="Legal assistant"
-            bio={bio}
-            picUrl='../affiches/Default.jpg'
-            posLeft={true} />
+                <BiographyGen 
+                name="Margaux Boisrame" 
+                charge="Assistant producer"
+                picUrl='/affiches/Default.jpg'
+                mail="margaux@avenuebprod.com"
+                posLeft={true} />
 
-            <Footer/ >
+                <BiographyGen 
+                name="Thomas Ramon"
+                charge="Assistant producer, legal assistant"
+                picUrl='/affiches/Default.jpg'
+                mail="thomas@avenuebprod.com"
+                posLeft={false} />
+
+            </section>
+            
+            <Footer/>
         </>
     );
 }
 
-function BiographyGen({name, charge, bio, picUrl, posLeft}) {
+function BiographyGen({name, charge, picUrl, mail, posLeft}) {
 
     return (
         <div className='bioContainer'>
             <img src={picUrl}/>
             <h2>{name}</h2>
             <h3>{charge}</h3>
-            <p>{bio}</p>
+            {mail ? <a href={`mailto:${mail}`}>{mail}</a> : null}
         </div>
     );
 }

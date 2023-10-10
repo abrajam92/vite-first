@@ -1,29 +1,89 @@
+@import "../App.css";
 @import "SocialMediaIcons.css";
 
-#nvbar-1 {
-    padding: 0.7em;
+#nvbar-2 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
-    height: 6vh;
-    border-bottom: 2px solid rgba(235, 235, 235, 0.5);
+    column-gap: 4.5em;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.064);
+    margin-bottom: 1.5rem;
 }
 
-#logo-cont {flex-shrink: 2;}
+#logo-cont{
+    width: 100%;
+    text-align: center;
+}
 
-#logo-img {height: 6vh; width: auto;}
+#logo-img{
+    height: 4vh;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+}
 
-#site-links {display: flex;}
+#logo-down-bar{
+    width: 80%;
+    height: 2pt;
+    margin: 0 auto;
+    margin-top: 9pt;
+    background-image: linear-gradient(to left, white, rgb(241, 241, 241), rgb(241, 241, 241), white);
+}
+
+#site-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+}
+
+#site-links a{
+    display: block;
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: 400;
+    color: var(--gris-uno);
+    text-decoration: none;
+    margin: 0;
+    padding: 1.3em 1em;
+}
+
+#site-links a:hover {
+    color: white;
+    background-color: var(--gris-cero);
+    transition: background-color 0.4s;
+}
+
+.active{
+    font-weight: 600 !important;
+    background-color: var(--gris-menosTres);
+    text-decoration: underline;
+    transition: background-color 0.4s;
+}
+
+#social-media-links>a{
+    opacity: 26%;
+    transition: opacity 0.3s ease-in;
+}
+
+#social-media-links>a:hover{
+    opacity: 70%;
+}
+
 
 #menu-button-cont {
-    z-index: 2;
+    z-index: 1;
     display: none;
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
     background-color: white;
     border-radius: 4px;
+    margin-right: 1em;
 }
 
 .menu-line {
@@ -37,31 +97,62 @@
 @media screen and (max-width: 1024px) {
 
     #logo-cont{display: none;}
-    #nvbar-1 {justify-content: space-around;}
+
+    #nvbar-2 {
+        justify-content: space-around;
+    }
+
     #site-links {display: flex;}
 }
 
 @media screen and (max-width: 768px) {
     
-    #nvbar-1 {justify-content: space-between;}
-
-    #logo-cont{
-        display: block;
+    #nvbar-2 {
+        position: sticky;
+        z-index: 1;
+        top: 0;
+        justify-content: space-between;
+        align-items: last baseline;
+        height: 100%;
     }
 
+    #logo-down-bar{
+        display: none;
+    }
+
+    #logo-cont{
+        display: initial;
+        width: fit-content;
+        margin-left: 1.5em;
+    }
+
+    #logo-img{
+        height: 2em;
+    }
+
+
     #site-links {
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         z-index: 1;
-        width: 35%;
+        width: 50%;
         height: 100%;
         display: none;
         overflow-x: hidden;
         flex-direction: column;
+        align-items: flex-start;
         background-color: white;
+        padding: 3em 0;
+        padding-left: 1em;
+        gap: 3em;
         transition: 0.3s;
         box-shadow: 3px 3px 25px rgba(81, 81, 81, 0.358);
+    }
+
+    #site-links a{
+        font-size: 6vw;
+        text-align: left;
     }
     
     #social-media-links {display: none;}
@@ -70,37 +161,14 @@
         display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
-        padding: 0.5em;
-
+        padding: 1em;
     }
 
     #menu-button-cont:hover {background-color: white;}
     #menu_button-cont:active {background-color: rgb(205, 205, 205);}
     #menu_button-cont:current {background-color: rgb(205, 205, 205);}
-    
 }
 
 @media screen and (min-width: 768px) {
-
-    #nvbar-1 {
-        background-color: rgb(247, 247, 247);
-    }
-
     #site-links {display: flex;}
-}
-
-#site-links > a{
-
-    font-size: 2vh;
-    font-weight: 400;
-    color: rgb(80, 80, 80);
-    text-decoration: none;
-    padding: 3vh 1.2rem;
-}
-
-#site-links > a:hover {
-    font-weight: 800;
-    color: white;
-    background-color: rgb(33, 33, 33);
-
 }

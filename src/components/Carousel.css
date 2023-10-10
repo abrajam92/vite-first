@@ -1,0 +1,40 @@
+.carousel-container {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: all 0.5s;
+}
+
+.slide {
+    flex: 0 0 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#prev{
+    transform: rotate(-90deg);
+}
+#next{
+    transform: rotate(90deg);
+}

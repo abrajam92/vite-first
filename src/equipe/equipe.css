@@ -1,0 +1,37 @@
+@import url("../../src/App.css");
+
+#general-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.bioContainer {
+    display: flex; 
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin-top: 8vh; 
+    height: 18vh;
+}
+  
+.bioContainer img {
+    width: 18vh;
+    height: 18vh;
+    margin-right: 3vw;
+}
+
+.bioContainer h2{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.bioContainer h3{
+    font-size: 1.4em;
+}
+  
+.bioContainer a {
+    font-size: 1em;
+}

@@ -1,0 +1,27 @@
+#ir-arriba-btn{
+    display: block;
+    position: fixed;
+
+    width: 80pt;
+    height: 45pt;
+
+    right: 10pt;
+    bottom: 60pt;
+
+    font-size: 1.5vh;
+    z-index: 1;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    border-radius: 0.3vh;
+    opacity: 80%;
+    font-size: 12pt;
+}
+
+#arrw{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    font-size: 44pt;
+    margin: 0 auto;
+}

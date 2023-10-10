@@ -1,6 +1,6 @@
 .socialMediaIcons{
     width: 3vh;
-    height: auto;
+    height: fit-content;
     padding: 0;
     margin: 0;
 }

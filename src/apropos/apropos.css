@@ -1,0 +1,11 @@
+@import url("../../src/App.css");
+
+#generalContainer>p{
+    margin-bottom: 1.5em;
+    line-height: 1.2;
+}
+
+#formAveB {
+    display: flex;
+    flex-direction: column;
+}

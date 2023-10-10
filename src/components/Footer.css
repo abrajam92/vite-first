@@ -1,61 +1,77 @@
+@import "../App.css";
 @import "SocialMediaIcons.css";
 
-footer {
+#footerAveB-firstContainer {
 
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    align-content: space-evenly;
-    height: 22vh;
-    width: 100%;
-    margin-top: auto;
-    border-top: 2px solid rgba(235, 235, 235, 0.5);
-    margin-top: 10vh;
-}
-
-#footer-firstList{
-
-
-    margin: 0;
-    padding: 0;
-    padding-top: 1em;
-
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    align-items: center;
-
-}
-
-#footer-secList{
-
-    margin: 0;
-    padding: 0;
-    padding-top: 1em;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-}
-
-#footer-thirdList{
-
-    margin: 0;
-    padding: 0;
-    padding-top: 1em;
-
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-
+    flex-flow: column nowrap;
+    height: fit-content;
+    padding-top: 3em;
+    padding-bottom: 5em;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.035);
+    background-color: white;
 }
 
 footer li a{
-
     width: fit-content;
     height: fit-content;
     padding: 0;
     margin: 0;
     text-decoration: none;
+    color: var(--gris-uno);
+}
+
+#footer-firstList{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    list-style: none;
+    align-items: center;
+    
+}
+
+#footerAveB-secContainer {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3em;
+    margin-top: 1.6em;
+    line-height: 1;
+}
+
+#footer-secList{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 3%;
+    margin: 0;
+    padding: 0;
+    padding-top: 1em;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#footer-secList li{
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--negro-uno);
+}
+
+#footer-secList li a:hover{
+    color: var(--negro-dos);
+}
+
+
+#footer-thirdList{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: normal;
+
 }

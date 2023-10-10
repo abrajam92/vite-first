@@ -1,0 +1,36 @@
+@import url("../../src/App.css");
+
+.news-section{
+    margin: 5em 0;
+    padding: 2em;
+}
+
+.news-header{
+    text-align: start;
+    font-family: "Sofia sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.5rem;
+    border-bottom: 2pt solid var(--gris-menosDos);
+
+}
+
+.news-date{
+    color: var(--gris-uno);
+    font-family: "Sofia sans condensed", sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+
+}
+.news-img{
+    width: 100%;
+    height: fit-content;
+}
+
+.news-paragraph{
+    margin-top: 1.8em;
+}
+
+.news-ext-link{}
