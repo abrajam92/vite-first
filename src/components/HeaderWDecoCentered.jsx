@@ -4,7 +4,7 @@ function HeaderWDecoCentered({title, justifiedRight = false}){
 
     // Si justifiedRight, en .decorative-bars justify-content: end
     let assignedClassesCont = "decorative-bars";
-    let assignedClassesHeader = "decoratedHeader";
+    let assignedClassesHeader = "decoratedHeader syllable";
 
     if (justifiedRight){
         assignedClassesHeader += " alignRight";

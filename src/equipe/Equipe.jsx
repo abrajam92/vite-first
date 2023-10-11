@@ -2,6 +2,8 @@ import './equipe.css';
 
 import NavigationBar from '/src/components/NavigationBar';
 import Footer from '/src/components/Footer';
+import IrArriba from '/src/components/IrArriba';
+
 
 
 function Equipe() {
@@ -9,6 +11,7 @@ function Equipe() {
     return (
         <>
             <NavigationBar actualPage={3}/>
+            <IrArriba/>
 
             <section id='general-container'>
 

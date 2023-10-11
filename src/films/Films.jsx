@@ -4,6 +4,8 @@ import './Films.css';
 import filmList from '/src/films.json';
 import NavigationBar from '/src/components/NavigationBar';
 import Footer from '/src/components/Footer';
+import IrArriba from '/src/components/IrArriba';
+
 
 function Films() {
     // Film from the list
@@ -51,6 +53,7 @@ function Films() {
     return (
         <>
             <NavigationBar actualPage={2}/>
+            <IrArriba/>
 
             <div className="generalContainer">
                 
@@ -188,11 +191,7 @@ function FilmsParser({setFs, typeSelected, categSelected}) {
 
 function CategoryHeader({headerName}){
 
-    return (
-        <>
-            <h1 className='categoryHeader'>{headerName}</h1>
-        </>
-    );
+    return (<><h1 className='categoryHeader'>{headerName}</h1></>);
 }
 
 function MovieCard({ 

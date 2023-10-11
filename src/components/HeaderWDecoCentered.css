@@ -1,6 +1,5 @@
 @import url("../../src/App.css");
 
-
 .decorative-bars {
     display: flex;
     align-items: center;
@@ -31,3 +30,13 @@
   }
 
   .alignRight{text-align: right;}
+
+  @media screen and (max-width: 1080px) {
+
+  }
+
+  @media screen and (max-width: 800px) {
+    .decoratedHeader {
+      font-size: 42pt;
+    }
+  }

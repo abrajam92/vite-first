@@ -150,7 +150,7 @@ function MovieCardAccueil({
 function Actualites() {
 
     const arr = newsList.map( (item, index) => {const imglnk = item.imageLink; return(
-            <div key={index} className='actualitesCard' style={{ backgroundImage: `url(${imglnk})` }}>
+            <div key={index} className='actualitesCard' style={{ backgroundImage:`url(${imglnk})`}}>
                 <div className='item'>
                     <h1 className='actualites-title syllable'>{item.header}</h1>
                     <p className='actualites-paragraph'>{item.date}</p>

@@ -130,6 +130,9 @@
         height: 2em;
     }
 
+    .active{
+        background-color: initial;
+    }
 
     #site-links {
         position: fixed;
@@ -144,18 +147,22 @@
         align-items: flex-start;
         background-color: white;
         padding: 3em 0;
-        padding-left: 1em;
-        gap: 3em;
-        transition: 0.3s;
+        gap: 0;
         box-shadow: 3px 3px 25px rgba(81, 81, 81, 0.358);
+        opacity: 97%;
+        transition: all 0.3s;
     }
 
     #site-links a{
         font-size: 6vw;
         text-align: left;
+        padding: 2.3em 1em;
+        background-color: white;
     }
     
     #social-media-links {display: none;}
+
+    /* Para el menú hamburguesa */
 
     #menu-button-cont {
         display: flex;

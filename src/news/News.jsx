@@ -4,6 +4,8 @@ import newsList from '/src/news.json';
 
 import NavigationBar from '/src/components/NavigationBar';
 import Footer from '/src/components/Footer';
+import IrArriba from '/src/components/IrArriba';
+
 
 function News() {
 
@@ -26,6 +28,7 @@ function News() {
     return (
         <>
             <NavigationBar actualPage={4}/>
+            <IrArriba/>
 
             <div className='fiftyPercentContainer'>
                 {arr}

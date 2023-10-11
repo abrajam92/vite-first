@@ -8,6 +8,15 @@ section{
   width: 87%;
 }
 
+@media screen and (max-width: 800px) {
+  section{
+    margin: 1em auto 8em;
+  }
+  .sectionMargins{
+    width: 92%;
+  }
+}
+
 .line{
   height: 5px;
   width: 100%;
@@ -55,6 +64,26 @@ section{
   width: 50%;
   font-weight: 400;
   font-size: 1.5em;
+}
+
+@media screen and (max-width: 1080px) {
+
+}
+
+@media screen and (max-width: 800px) {
+
+  #briefDescription>p {
+    width: 100%;
+  }
+
+  #logoBriefDescription {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
 }
 
 
@@ -187,6 +216,20 @@ section{
   color: white;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 800px) {
+  #actualitesContainer{
+    flex-flow: column nowrap;
+    gap: 1em;
+  }
+  .actualitesCard{
+    width: 100%;
+    padding-bottom: 50%;
+  }
+  .actualites-title{
+    font-size: 3.5vw;
+  }
 }
 
 .actualites-paragraph{
