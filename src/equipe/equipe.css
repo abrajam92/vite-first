@@ -2,11 +2,13 @@
 
 #general-container{
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: end;
+    align-content: flex-end;
     width: 80%;
     margin: 0 auto;
     height: fit-content;
+    padding-bottom: 12em;
 }
 
 .bioContainer {
@@ -15,6 +17,7 @@
     align-content: flex-start;
     margin-top: 8vh; 
     height: 18vh;
+    width: 50%;
 }
   
 .bioContainer img {
@@ -34,4 +37,10 @@
   
 .bioContainer a {
     font-size: 1em;
+}
+
+@media screen and (max-width: 1280px) {
+    .bioContainer{
+        width: 100%;
+    }
 }

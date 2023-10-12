@@ -17,7 +17,7 @@ function HeaderWDecoCentered({title, justifiedRight = false}){
     return (
         <div className={assignedClassesCont}>
             {/*<div className="decorative-bar-left"></div>*/}
-            <h1 className={assignedClassesHeader}>{">"}{title}</h1>
+            <h1 className={assignedClassesHeader}>{title}</h1>
         </div>
     );
 }

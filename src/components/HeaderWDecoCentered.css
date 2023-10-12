@@ -27,6 +27,12 @@
     font-size: 80pt;
     font-weight: 800;
     text-align: left;
+
+    border-left: 120px dotted var(--negro-uno);
+    padding-left: 2rem;
+
+    padding-bottom: 0;
+    margin-bottom: 0.3em;
   }
 
   .alignRight{text-align: right;}
@@ -38,5 +44,7 @@
   @media screen and (max-width: 800px) {
     .decoratedHeader {
       font-size: 42pt;
+      border-left: 57px dotted var(--negro-uno);
+      padding-left: 1rem;
     }
   }

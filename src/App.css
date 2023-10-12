@@ -41,8 +41,17 @@ p {
   text-align: justify;
 }
 
+.sixtyFivePercentContainer{
+  width: 65%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
 @media screen and (max-width: 800px) {
   .fiftyPercentContainer{
+    width: 92%;
+  }
+  .sixtyFivePercentContainer{
     width: 92%;
   }
 }

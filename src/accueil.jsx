@@ -15,6 +15,37 @@ import HeaderWDecoCentered from './components/HeaderWDecoCentered';
 function Accueil() {
 
     useEffect(() => {
+
+        const fn = () => {
+
+            const elementosAnimadosIzq = document.querySelectorAll(".animable-left");
+            const elementosAnimadosDer = document.querySelectorAll(".animable-right");
+
+            elementosAnimadosIzq.forEach((elemento) => {
+
+                const posicionElemento = elemento.getBoundingClientRect();
+            
+                if (posicionElemento.top < window.innerHeight)
+                    elemento.classList.add("anim-entering-left");
+            });
+
+            elementosAnimadosDer.forEach((elemento) => {
+
+                const posicionElemento = elemento.getBoundingClientRect();
+            
+                if (posicionElemento.top < window.innerHeight)
+                    elemento.classList.add("anim-entering-right");
+            });
+        }
+
+        window.addEventListener("scroll", fn);
+
+        return () => {
+            window.removeEventListener(scroll, fn);
+        }
+    });
+
+    useEffect(() => {
         const voirPlus = document.getElementById('voirPlus');
         const nosFilmsDiv = document.getElementById('nosFilmsDiv');
 
@@ -54,40 +85,46 @@ function Accueil() {
 
             {/* Sección Descripción */}
 
-            <section id='briefDescription' className='sectionMargins'>
+            <section id='briefDescription' className='sectionMargins animable-left'>
                 
-                <img id='logoBriefDescription' src='/logos/logo-Avenue-B-black.png'></img>
-                <p>Vingt ans après sa création, la ligne éditoriale d’Avenue B reste gouvernée par le même souhait de concilier exigence artistique et ouverture des films au public. Avec la volonté de produire des films aux genres variés abordant des sujets et thématiques pluriels.
-                    <br></br><a href='/src/apropos/'><span className='arrowVoirPlus'>▲</span>voir plus</a>
+                <img id='logoOnBriefDescription' src='/logos/logo-Avenue-B-black.png'></img>
+                <p className='syllable' id='paragraphDescription'>
+                    Avenue B célèbre ses 20 ans d’existence avec un catalogue de plus d’une vingtaine de longs-métrages, une dizaine de courts-métrages et une variété de documentaires aux formats divers. La ligne éditoriale de la société embrasse un large éventail cinématographique, allant de films d’auteurs pointus (aux succès commerciaux plus étendus).
+                    <br></br>
                 </p>
+                
+                <p id='brief-lirePlus'><a href='/src/apropos/'>Lire plus</a></p>
 
             </section>
 
             {/* Sección Nos Films */}
 
-            <section id='nosFilmsDiv' className='sectionMargins'>
+            <section id='nosFilmsSection' className='sectionMargins animable-right'>
                     
                 <HeaderWDecoCentered title="Nos Films"/>
                 
                 {/*<Carousel></Carousel>*/}
-                <FilmsParserAccueil noOfShowedCards={4}/>
-                <div className='movieCard'>
-                    <a id='voirPlus' href='/src/films/'><span className='arrowVoirPlus'>▲</span>Voir tous les films</a>
-                </div>
+                <FilmsParserAccueil noOfShowedCards={5}/>
+
+                <p id='voirPlus' className='syllable'><a href='/src/films/'>
+                    Voir tous les films
+                    </a></p>
 
             </section>
 
             {/* Sección Actualités */}
 
-            <section className='sectionMargins'>
+            <section className='sectionMargins animable-left'>
 
                 <HeaderWDecoCentered title="Actualités"/>
                 <Actualites/>
+                <p id='actualites-lirePlus'><a href='/src/news/'>Lire plus</a></p>
 
             </section>
 
             {/* Sección Prix et Nominations */}
 
+            {/*
             <section className='sectionMargins'>
 
                 <HeaderWDecoCentered title="Prix et nominations"/>
@@ -103,6 +140,16 @@ function Accueil() {
                     <li> Prix du Jury Junior au Festival International du Film Francophone de Namur, Mention Spéciale du jury au Sitges International Film Festival, Mention spéciale dans la catégorie «NEXT WAVE FEATURES» au Austin Fantastic Fest</li>
                 </ul>
                 
+            </section>
+            */}
+
+            {/* Sección Contactez nous */}
+
+            <section className='sectionMargins anim-blinking' id='contactezNous'>
+                <h2>Contactez nous:</h2>
+                <p><a href='/src/apropos/'>{">"} Si vous souhaitez nous envoyer votre projet</a></p>
+                <div className='line'></div>
+                <p><a href='/src/equipe/'>{">"} ou que vous voulez nous contacter sur d'autre propos</a></p>
             </section>
 
             <Footer/>
@@ -162,7 +209,6 @@ function Actualites() {
     return(
         <div id='actualitesContainer'>
             {arr}
-            <a href='/src/news/' id='actualites-lirePlus'>Lire plus</a>
         </div>
     );
 }

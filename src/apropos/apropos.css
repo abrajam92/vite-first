@@ -1,17 +1,19 @@
 @import url("../../src/App.css");
 
-#generalContainer>p{
+.header~p{
     margin-bottom: 1.5em;
     line-height: 1.2;
 }
 
 .header{
-    text-align: center;
+    text-align: left;
     font-family: "Sofia sans condensed", sans-serif;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 5vw;
     margin-bottom: 0.25em;
+    border-left: 12px solid black;
+    padding-left: 1rem;
 }
 
 #formAveB {
@@ -23,8 +25,16 @@
     .header{
         margin-top: 0.5em;
         margin-bottom: 0.7em;
-        font-size: 3em;
+        font-size: 4.6em;
         text-align: left;
-        line-height: 1.05;
+        line-height: 1.2;
+        
+        border-left: 12px solid black;
+        border-bottom: 12px solid black;
+    }
+
+    .header~p{
+        font-size: 1.5em;
+        line-height: 1.4;
     }
 }

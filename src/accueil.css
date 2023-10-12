@@ -1,7 +1,7 @@
 @import url("./App.css");
 
 section{
-  margin: 1em auto 28em;
+  margin: 1em auto 12em;
 }
 
 .sectionMargins{
@@ -20,8 +20,8 @@ section{
 .line{
   height: 5px;
   width: 100%;
-  background-color: var(--gris-menosUno);
-  margin: 0.6rem 0;
+  background-color: var(--gris-cero);
+  margin: 2rem 0;
 }
 
 /* Section 1: A La Une */
@@ -51,34 +51,95 @@ section{
 #briefDescription {
   display: flex;
   flex-flow: row wrap;
-  column-gap: 6em;
-  row-gap: 2em;
+  justify-content: space-around;
 }
 
-#logoBriefDescription {
-  width: 600px;
+#logoOnBriefDescription {
+  width: 30vw;
   height: fit-content;
 }
 
-#briefDescription>p {
-  width: 50%;
+.anim-entering-left{
+  animation-name: entering-left;
+  animation-duration: 1.7s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.anim-entering-right{
+  animation-name: entering-right;
+  animation-duration: 1.7s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.anim-blinking{
+  animation-name: blinking;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes entering-left {
+  from {transform: translateX(-1000px);}
+  to {transform: translateX(0px);}
+}
+
+@keyframes entering-right {
+  from {transform: translateX(1000px);}
+  to {transform: translateX(0px);}
+}
+
+@keyframes blinking {
+  0% {opacity: 50%;}
+  50% {opacity: 100%;}
+  100% {opacity: 50%;}
+}
+
+#paragraphDescription {
+  width: calc(87vw - 30vw - 7vw);
   font-weight: 400;
   font-size: 1.5em;
 }
 
-@media screen and (max-width: 1080px) {
+#brief-lirePlus{
+  width: 100vw;
+  font-size: 22pt;
+  font-weight: 600;
+  text-align: end;
+  border-top: 5pt dotted var(--gris-menosUno);
+  margin-top: 4rem;
+  padding-top: 1rem;
+}
+
+#brief-lirePlus>a{
+  color: var(--gris-menosUno);
+  text-decoration: none;
+}
+
+#brief-lirePlus>a:hover{
+  color: var(--gris-cero);
+}
+
+
+@media screen and (max-width: 1280px) {
+  #briefDescription {
+    width: 87%;
+    flex-flow: column;
+  }
+  #briefDescription>p {
+    width: 100%;
+  }
+  #logoOnBriefDescription {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
 
 }
 
 @media screen and (max-width: 800px) {
-
-  #briefDescription>p {
-    width: 100%;
-  }
-
-  #logoBriefDescription {
-    width: 100%;
-  }
 
 }
 
@@ -90,51 +151,61 @@ section{
 /* Section 3: Nos films */
 
 
-#nosFilmsDiv {
+#nosFilmsSection{
   display: flex;
   flex-flow: row wrap;
-  justify-content: stretch;
+  justify-content: center;
+  align-content: space-between;
   margin-top: 2em;
   height: fit-content;
-  padding: 0;
-  background-color: transparent;
-  /* Establece el fondo inicial como transparente */
-  border: 1pt solid transparent;
-  /* Establece el borde inicial como transparente */
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: transparent; /* Establece el fondo inicial como transparente */
+  border: 1pt solid transparent; /* Establece el borde inicial como transparente */
   transition: background-color 0.3s, border 0.3s;
 }
 
-.arrowVoirPlus {
-  display: inline-block;
-  transform: rotate(90deg);
-}
-
 #voirPlus {
+  text-align: right;
   font-size: 20pt;
   font-weight: 600;
-  color: var(--gris-uno);
   padding: 0;
   margin-right: 1em;
-  margin-top: 0.4em;
   padding-bottom: 0.4em;
   height: 100%;
+  width: 100%;
   cursor: pointer;
-  text-decoration: underline;
+  color: var(--gris-cero);
+  border-top: 5pt dotted var(--gris-menosUno);
+  margin-top: 1.2rem;
+  padding-top: 1rem;
 }
+
+#voirPlus a{
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: none;
+}
+
+#voirPlus a:visited{
+  color: var(--gris-menosUno);
+}
+#voirPlus a:hover{
+  color: var(--gris-cero);
+}
+
 
 .movieCard {
   position: relative;
   box-sizing: border-box;
-  width: 200pt;
-  height: 300pt;
-  /*
-  width: calc(92.8vw / 6.07);
-  height: 40vh;
-  */
-  border-radius: 5px;
+  
+  width: calc(100% / 6);
+  min-height: calc((100% / 6) * 1.5);
+  
+  border-radius: 4px;
   margin: .6vw;
   overflow: hidden;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .moviePosterImg {
@@ -146,33 +217,20 @@ section{
 }
 
 @media screen and (max-width: 1500px) {
-  
-  .moviesListContainer {
-    width: 100%;
-  }
 
-  .movieCard {
-    width: calc(94vw / 5.08);
-  }
 }
 
 @media screen and (max-width: 1080px) {
   .movieCard {
-    width: calc(96.4vw / 4.18);
-    height: 33vh;
+    width: calc(100% / 4.18);
+    min-height: calc((100% / 4.18) * 1.5);
   }
 }
 
 @media screen and (max-width: 800px) {
   .movieCard {
-    width: calc(97.6vw / 2.08);
-    height: 37vh;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .movieCard {
-    height: 30vh;
+    width: calc(100% / 3.3);
+    min-height: calc((100% / 3.3) * 1.5)
   }
 }
 
@@ -184,7 +242,7 @@ section{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 .actualitesCard{
@@ -195,6 +253,7 @@ section{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.117);
 }
 
 .item{
@@ -218,6 +277,34 @@ section{
   text-transform: uppercase;
 }
 
+.actualites-paragraph{
+  font-family: "Sofia sans";
+  font-weight: 700;
+  color: white;
+}
+
+#actualites-lirePlus{
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 22pt;
+  font-weight: 600;
+  text-align: end;
+  border-top: 5pt dotted var(--gris-menosUno);
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+}
+
+#actualites-lirePlus>a{
+  color: var(--gris-menosUno);
+  text-decoration: none;
+}
+
+#actualites-lirePlus>a:hover{
+  color: var(--gris-cero);
+}
+
+
+
 @media screen and (max-width: 800px) {
   #actualitesContainer{
     flex-flow: column nowrap;
@@ -232,21 +319,45 @@ section{
   }
 }
 
-.actualites-paragraph{
-  font-family: "Sofia sans";
-  font-weight: 700;
-  color: white;
-}
-
-#actualites-lirePlus{
-  font-size: 22pt;
-  font-weight: 600;
-}
-
 
 /******* Section 5: Prix et nominations ******/
 
 
 #prixUnordList{
   list-style-type: none;
+}
+
+
+/******* Section 5: Contactez Nous ******/
+
+
+#contactezNous{
+  width: 60%;
+  margin-bottom: 12em;
+}
+
+#contactezNous>h2{
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 1.0;
+  margin-bottom: 1em;
+  font-size: 5em;
+  font-weight: 800;
+}
+
+#contactezNous>p{
+  text-align: right;
+  font-size: 2.1em;
+  font-weight: 600;
+  margin-bottom: 1.3em;
+}
+#contactezNous a{
+  text-decoration: none;
+  color: var(--gris-uno);
+
+}
+
+#contactezNous a:hover{
+  color: black;
+  text-decoration: underline solid black;
 }
